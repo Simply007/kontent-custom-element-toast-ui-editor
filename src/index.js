@@ -1,17 +1,19 @@
-import Editor from 'tui-editor';
+import Editor from '@toast-ui/editor';
 
-import 'tui-editor/dist/tui-editor-extChart';
-import 'tui-editor/dist/tui-editor-extUML';
-import 'tui-editor/dist/tui-editor-extTable';
-import 'tui-editor/dist/tui-editor-extColorSyntax';
-import 'tui-editor/dist/tui-editor-extScrollSync';
-import 'tui-editor/dist/tui-editor-Viewer-all';
+import chart from '@toast-ui/editor-plugin-chart';
+import codeSyntaxHighlight from '@toast-ui/editor-plugin-code-syntax-highlight';
+import hljs from 'highlight.js';
+import colorSyntax from '@toast-ui/editor-plugin-color-syntax';
+import tableMergedCell from '@toast-ui/editor-plugin-table-merged-cell';
+import uml from '@toast-ui/editor-plugin-uml';
 
-import 'tui-editor/dist/tui-editor-contents.min.css';
 import 'codemirror/lib/codemirror.css';
-import 'tui-chart/dist/tui-chart.min.css';
-import 'tui-editor/dist/tui-editor.min.css';
-import 'tui-color-picker/dist/tui-color-picker.min.css';
+import '@toast-ui/editor/dist/toastui-editor.css';
+import '@toast-ui/editor/dist/toastui-editor-viewer.css';
+import 'tui-color-picker/dist/tui-color-picker.css';
+
+import 'tui-chart/dist/tui-chart.css';
+import 'highlight.js/styles/github.css';
 
 import './css/editor.css';
 
@@ -22,7 +24,7 @@ let value = '';
 let editor;
 
 function storeValue() {
-  value = editor.getValue();
+  value = editor.getMarkdown();
   CustomElement.setValue(value);
 }
 
@@ -45,13 +47,12 @@ function updateDisabled(disabled) {
       events: {
         change: storeValue
       },
-      exts: [
-        'chart',
-        'scrollSync',
-        'colorSyntax',
-        'uml',
-        'mark',
-        'table'
+      plugins: [
+        chart,
+        [codeSyntaxHighlight, { hljs }],
+        colorSyntax,
+        tableMergedCell,
+        uml
       ]
     });
   }
