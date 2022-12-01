@@ -1,8 +1,8 @@
-# Kentico Kontent Toast UI editor custom element
+# Kontent Toast UI editor custom element
 
 [![Stack Overflow](https://img.shields.io/badge/Stack%20Overflow-ASK%20NOW-FE7A16.svg?logo=stackoverflow&logoColor=white)](https://stackoverflow.com/tags/kentico-kontent)
 
-This is a [custom element](https://docs.kontent.ai/tutorials/develop-apps/integrate/integrating-your-own-content-editing-features) for [Kentico Kontent](https://kontent.ai) that allows you to use the [Toast UI Editor](https://ui.toast.com/tui-editor). It is a Markdown WYSIWYG Editor including GFM Standard + Chart & UML Extensible.
+This is a [custom element](https://docs.kontent.ai/tutorials/develop-apps/integrate/integrating-your-own-content-editing-features) for [Kontent.ai](https://kontent.ai) that allows you to use the [Toast UI Editor](https://ui.toast.com/tui-editor). It is a Markdown WYSIWYG Editor including GFM Standard + Chart & UML Extensible.
 
 All of the editor [extensions](https://github.com/nhnent/tui.editor/blob/master/docs/using-extensions.md) are enabled in this custom element.
 
@@ -12,7 +12,7 @@ All of the editor [extensions](https://github.com/nhnent/tui.editor/blob/master/
 
 1. Deploy the code to a secure public host
     * See [deploying section](#Deploying) for a really quick option
-1. Follow the instructions in the [Kentico Kontent documentation](https://docs.kontent.ai/tutorials/develop-apps/integrate/integrating-your-own-content-editing-features#a-3--displaying-a-custom-element-in-kentico-kontent) to add the element to a content model.
+1. Follow the instructions in the [Kontent.ai documentation](https://docs.kontent.ai/tutorials/develop-apps/integrate/integrating-your-own-content-editing-features#a-3--displaying-a-custom-element-in-kentico-kontent) to add the element to a content model.
     * The `Hosted code URL` is where you deployed to in step 1
     * No JSON parameters are necessary
 
